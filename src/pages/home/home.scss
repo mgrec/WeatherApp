@@ -1,3 +1,30 @@
+/*** ANIMATION ****/
+@-webkit-keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Standard syntax */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/*** STYLE ***/
+
 page-home {
 
+}
+
+.btn-home{
+  width: 40%;
+  margin: 120px auto;
+  display: block;
+  margin-bottom: 120px;
+
+}
+
+.btn-animation{
+  animation: spin 1s linear;
 }

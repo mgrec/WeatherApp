@@ -1,11 +1,22 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <ion-title>
       Ionic Blank
     </ion-title>
   </ion-navbar>
 </ion-header>
+-->
 
 <ion-content padding>
-  <button (click)="getMyPostion()">GET WEATHER</button>
+  <img (click)="getMyPostion()" class="btn-home {{ animation }}" src="./assets/img/buttonGetTemp.png" alt="">
+
+  <p>{{ location }}</p>
+  <ul>
+    <li>Température : {{ tempNow }}</li>
+    <li>Température maximum : {{ tempMax }}</li>
+    <li>Température minimum : {{ tempMin }}</li>
+    <li>Humidité : {{ humidity }}</li>
+    <li>Temps : {{ weather }}</li>
+    <img src="{{ icon }}" alt="">
+  </ul>
 </ion-content>
