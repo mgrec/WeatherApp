@@ -15,9 +15,9 @@ export class HomePage {
     tempMax: string;
     tempMin: string;
     humidity: string;
-    icon : string;
-    weather : string;
-    animation : string;
+    icon: string;
+    weather: string;
+    animation: string;
 
     constructor(public navCtrl: NavController, private geolocation: Geolocation, public http: Http) {
 
@@ -27,16 +27,15 @@ export class HomePage {
         this.geolocation.getCurrentPosition().then((resp) => {
             let lat = resp.coords.latitude;
             let long = resp.coords.longitude;
-            this.animation = 'btn-animation';
 
             this.http.get("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=fa0226a5cf9241a017b02bc886fe9765&units=metric").map(res => res.json()).subscribe(data => {
                 console.log(data);
 
                 // put result(s) in var
                 this.location = data.name;
-                this.tempNow = data.main.temp;
-                this.tempMax = data.main.temp_max;
-                this.tempMin = data.main.temp_min;
+                this.tempNow = data.main.temp + '°';
+                this.tempMax = data.main.temp_max + '°';
+                this.tempMin = data.main.temp_min + '°';
                 this.humidity = data.main.humidity + '%';
                 this.weather = data.weather[0].description;
                 this.icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';

@@ -1,15 +1,42 @@
 /*** ANIMATION ****/
-@-webkit-keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+@-webkit-keyframes zoomIn {
+  from {
+    width: 40%
+  }
+  to {
+    width: 45%
+  }
 }
 
 /* Standard syntax */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes zoomIn {
+  from {
+    width: 40%
+  }
+  to {
+    width: 43%
+  }
 }
 
+@-webkit-keyframes zoomInAction {
+  from {
+    width: 40%
+  }
+  to {
+    width: 50%
+  }
+}
+
+/* Standard syntax */
+@keyframes zoomInAction {
+  from {
+    width: 40%
+  }
+  to {
+    width: 50%
+  }
+}
 
 /*** STYLE ***/
 
@@ -17,14 +44,22 @@ page-home {
 
 }
 
-.btn-home{
+.btn-home {
   width: 40%;
-  margin: 120px auto;
-  display: block;
-  margin-bottom: 120px;
-
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  -webkit-animation: zoomIn 1s alternate;
+  animation: zoomIn 1s linear infinite alternate;
 }
 
-.btn-animation{
-  animation: spin 1s linear;
+.contentWeather {
+  text-align: center;
+  margin: 100% auto;
+  display: block;
+}
+
+.LocationTitle{
+  font-weight: 800;
 }

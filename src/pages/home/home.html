@@ -8,15 +8,15 @@
 -->
 
 <ion-content padding>
-  <img (click)="getMyPostion()" class="btn-home {{ animation }}" src="./assets/img/buttonGetTemp.png" alt="">
+    <img (click)="getMyPostion()" class="btn-home" src="./assets/img/buttonGetTemp.png" alt="">
 
-  <p>{{ location }}</p>
-  <ul>
-    <li>Température : {{ tempNow }}</li>
-    <li>Température maximum : {{ tempMax }}</li>
-    <li>Température minimum : {{ tempMin }}</li>
-    <li>Humidité : {{ humidity }}</li>
-    <li>Temps : {{ weather }}</li>
-    <img src="{{ icon }}" alt="">
-  </ul>
+    <div class="contentWeather">
+        <p class="LocationTitle">{{ location }}</p>
+        <p>Température : {{ tempNow }}</p>
+        <p>Température maximum : {{ tempMax }}</p>
+        <p>Température minimum : {{ tempMin }}</p>
+        <p>Humidité : {{ humidity }}</p>
+        <img src="{{ icon }}" alt="">
+    </div>
+
 </ion-content>
