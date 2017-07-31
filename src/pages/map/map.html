@@ -1,0 +1,23 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+-->
+<ion-content>
+
+    <img (click)="returnHome()" class="upArrow" src="./assets/img/up-arrow.png" alt="">
+
+    <div (click)="getNewWeather()" #map id="map" style="height: 250px"></div>
+
+    <div class="contentWeather">
+        <p class="LocationTitle">{{ location }}</p>
+        <p>Température : {{ tempNow }}</p>
+        <p>Température maximum : {{ tempMax }}</p>
+        <p>Température minimum : {{ tempMin }}</p>
+        <p>Humidité : {{ humidity }}</p>
+        <img src="{{ icon }}" alt="">
+    </div>
+</ion-content>

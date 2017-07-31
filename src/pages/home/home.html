@@ -7,16 +7,29 @@
 </ion-header>
 -->
 
-<ion-content padding>
-    <img (click)="getMyPostion()" class="btn-home" src="./assets/img/buttonGetTemp.png" alt="">
+<ion-content>
 
-    <div class="contentWeather">
-        <p class="LocationTitle">{{ location }}</p>
-        <p>Température : {{ tempNow }}</p>
-        <p>Température maximum : {{ tempMax }}</p>
-        <p>Température minimum : {{ tempMin }}</p>
-        <p>Humidité : {{ humidity }}</p>
-        <img src="{{ icon }}" alt="">
+    <div class="contentHomeTop">
+
+    </div>
+
+    <div class="contentHomeBottom">
+        <div class="contentHomeBottom-nav"></div>
+        <div class="contentHomeBottom-info">
+
+            <div class="round round--1"></div>
+
+            <div class="round round--2"></div>
+
+            <div class="round round--3"></div>
+
+            <div class="contentHome-info_left">
+
+            </div>
+            <div class="contentHome-info_rigth">
+
+            </div>
+        </div>
     </div>
 
 </ion-content>

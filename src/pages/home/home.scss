@@ -1,65 +1,78 @@
-/*** ANIMATION ****/
-
-@-webkit-keyframes zoomIn {
-  from {
-    width: 40%
-  }
-  to {
-    width: 45%
-  }
-}
-
-/* Standard syntax */
-@keyframes zoomIn {
-  from {
-    width: 40%
-  }
-  to {
-    width: 43%
-  }
-}
-
-@-webkit-keyframes zoomInAction {
-  from {
-    width: 40%
-  }
-  to {
-    width: 50%
-  }
-}
-
-/* Standard syntax */
-@keyframes zoomInAction {
-  from {
-    width: 40%
-  }
-  to {
-    width: 50%
-  }
-}
-
 /*** STYLE ***/
 
 page-home {
 
 }
 
-.btn-home {
-  width: 40%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 30%;
-  left: 50%;
-  -webkit-animation: zoomIn 1s alternate;
-  animation: zoomIn 1s linear infinite alternate;
+.contentHomeTop{
+  background: transparent;
+  width: 100%;
+  height: 40%;
 }
 
-.contentWeather {
-  text-align: center;
-  margin: 100% auto;
-  display: block;
-}
+.contentHomeBottom{
+  background: transparent;
+  width: 100%;
+  height: 60%;
 
-.LocationTitle{
-  font-weight: 800;
+  .contentHomeBottom-nav{
+    background: rgba(34, 33, 49, 0.6);
+    width: 100%;
+    height: 12%;
+  }
+
+  .contentHomeBottom-info{
+    background: rgba(34, 33, 49, 1);
+    width: 100%;
+    height: 88%;
+
+    .round{
+      background: #FFFFFF;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      left: 26%;
+      top: 57%;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        background: rgba(255, 255, 255, .3);
+        width: 40px;
+        height: 40px;
+      }
+
+      &.round--2{
+        top: 72%;
+      }
+
+      &.round--3{
+        top: 87%;
+      }
+    }
+
+    .contentHome-info_left{
+      background: transparent;
+      border-right: 4px solid #181721;
+      width: 30%;
+      height: 100%;
+      float: left;
+    }
+
+    .contentHome-info_rigth{
+      background: transparent;
+      width: 70%;
+      height: 100%;
+      float: right;
+    }
+
+  }
+
 }

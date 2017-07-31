@@ -1,0 +1,44 @@
+@-webkit-keyframes bounceUp {
+  from {
+    top: 5%
+  }
+  to {
+    top: 7%
+  }
+}
+
+ion-content{
+  background: #255763; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#283d6a, #b0d5ce)!important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#283d6a, #b0d5ce)!important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#283d6a, #b0d5ce)!important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#283d6a, #b0d5ce)!important; /* Standard syntax */
+}
+
+.upArrow{
+  width: 10%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  animation: bounceUp 1s linear infinite alternate;
+  left: 10%;
+  top: 5%;
+}
+
+.contentMap{
+  width: 100%;
+  height: 250px;
+}
+
+.contentWeather {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.LocationTitle{
+  font-weight: 800;
+}
+
+.resizeMap{
+  height: 100%;
+}
